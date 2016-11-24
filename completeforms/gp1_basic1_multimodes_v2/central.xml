@@ -7,9 +7,9 @@
     <!-- Non translatable values -->
     <authors>Eric Maeker, MD; Jerome Pinguet</authors>
     <version>test</version>
-    <fmfv>0.9.7</fmfv>
+    <fmfv>0.9.9</fmfv>
     <cdate>2012-09-03</cdate>
-    <lmdate>2016-04-22</lmdate>
+    <lmdate>2016-11-24</lmdate>
     <icon>generalpractitioner.png</icon>
     <weblink></weblink>
     <bibliography/>
@@ -154,32 +154,7 @@
     <icon>__theme__/edit.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
 
-    <MedForm name="GP::Basic::Prescr::Text">
-      <label lang="xx">Textual prescriptions</label>
-      <label lang="fr">Prescriptions textuelles</label>
-      <icon>__theme__/edit.png</icon>
-      <options>DontPrintEmptyValues</options>
-      <file type="htmlprintmask">./html/xx/padtools_textual_prescription_mask.html</file>
-      <file type="htmlexportmask">./html/xx/padtools_textual_prescription_mask.html</file>
-
-      <Item name="FileNavigationButton" type="buttonmenupath">
-        <label lang="xx">Select a file (replacement with confirmation)</label>
-        <label lang="fr">Sélectionnez un fichier (replacement avec confirmation)</label>
-        <tooltip lang="xx">Select a file and the its content will be included in the text editor</tooltip>
-        <tooltip lang="fr">Sélectionnez un fichier et son contenu sera insérer dans l'éditeur de texte</tooltip>
-        <icon>__theme__/fileopen.png</icon>
-        <path>__userDocuments__</path>
-        <filter>*.htm;*.html;*.txt;*.rtf</filter>
-        <populate>GP::Basic::Prescr::Text::Content</populate>
-      </Item>
-
-      <Item type="texteditor" name="GP::Basic::Prescr::Text::Content">
-        <label lang="xx">Textual prescription</label>
-        <label lang="fr">Prescription textuelle</label>
-        <options>FullEditor;DontPrintEmptyValues;PrintDuplicata;expanded</options>
-        <papers>Prescription</papers>
-      </Item>
-    </MedForm>
+    <file>__subForms__/prescriptions/fr/bizone/central.xml</file>
 
     <file>__subForms__/prescriptions/lab_assistant/central.xml</file>
 
