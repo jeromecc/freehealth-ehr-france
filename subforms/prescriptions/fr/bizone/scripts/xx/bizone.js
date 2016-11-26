@@ -44,8 +44,8 @@ namespace.module('com.freemedforms.prescriptions.fr.bizone', function (exports, 
 function bz_getUiElements() {
         print("hello");
         freemedforms.forms.namespaceInUse = "";
-        var formUi = freemedforms.forms.item("Subforms::Prescription::Fr::Bizone");
-        freemedforms.forms.namespaceInUse = "Subforms::Prescription::Fr::Bizone";
+        var formUi = freemedforms.forms.item("GP::Basic::Prescr::Text");
+        freemedforms.forms.namespaceInUse = "GP::Basic::Prescr::Text";
         var ui = formUi.ui();
         bz_bizoneCheckUi = ui.findChild("bizoneCheckBox");
         bz_bizoneCheckItem = freemedforms.forms.item("Bizone::Check");
@@ -68,7 +68,6 @@ function bz_connectUiElements()
     {
         bz_bizoneCollapsibleGroupUi['toggled(bool)'].connect(this, bz_onCheckChanged);
         //bz_bizoneCheckUi['stateChanged(int)'].connect(this, bz_onCheckChanged);
-        bz_maladiesIntercurrentesItem.textChanged.connect(this, bz_header);
     }
 
 function bz_onCheckChanged()

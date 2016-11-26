@@ -6,12 +6,12 @@
   <formdescription>
     <!-- Non translatable values -->
     <authors>Eric Maeker, MD</authors>
-    <version>test</version>
+    <version>0.9.9</version>
     <fmfv>0.8.4</fmfv>
     <cdate>2013-01-01</cdate>
     <lmdate>2013-05-23</lmdate>
     <icon>__theme__/carte_vitale.png</icon>
-    <weblink></weblink>
+    <weblink>https://freemedsoft.com</weblink>
     <bibliography/>
 
     <!-- Translatable values -->

@@ -6,7 +6,7 @@
 
     <!-- Non translatable values -->
     <authors>Jérôme Pinguet</authors>
-    <version>test</version>
+    <version>0.9.9</version>
     <fmfv>0.9.9</fmfv>
     <cdate>2016-06-27</cdate>
     <lmdate>2016-10-04</lmdate>

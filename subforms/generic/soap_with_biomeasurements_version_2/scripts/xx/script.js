@@ -1,23 +1,34 @@
-namespace.module('com.freemedforms.generic.soapWithBio', function (exports, require) {
-
+namespace.module('com.freemedforms.generic.soap_with_biomeasurements_version_2', function (exports, require) {
+    var syst;
+    var diast;
+    var pulse;
+    var weight;
+    var weightUnit;
+    var weightUnitItem;
+    var height;
+    var heightUnit;
+    var heightUnitItem;
+    var bmiValueLabel;
+    var bmiValueLineEdit;
+    
     exports.extend({
                        'setupUi': setupUi,
-                       'computePulsePressure': computePulsePressure,
-                       'computeBMI' : computeBMI
+                       'soap_computePulsePressure': soap_computePulsePressure,
+                       'soap_computeBMI': soap_computeBMI
                    });
 
-    // Ui vars (retrieved from the ui)
-    var syst, diast, pulse;
-    var weight, weightUnit, weightUnitItem, height, heightUnit, heightUnitItem, bmiValueLabel, bmiValueLineEdit;
-
     function setupUi() {
-        print("com.freemedforms.generic.soapWithBio Setup UI");
+        soap_getUiElements();
+        soap_connectUiElements();
+        soap_computePulsePressure();
+        soap_computeBMI();
+    }
 
-        // Get items to work with
+    function soap_getUiElements() {
+        print("soap_getUiElements()");
         freemedforms.forms.namespaceInUse = "";
         var formItem = freemedforms.forms.item("Subs::Tools::SOAP::WithBio");
-        print(formItem);
-        formUi = formItem.ui();
+        var formUi = formItem.ui();
         syst = formUi.findChild("bpSyst");
         diast = formUi.findChild("bpDiast");
         pulse = formUi.findChild("bpPulse");
@@ -29,46 +40,35 @@ namespace.module('com.freemedforms.generic.soapWithBio', function (exports, requ
         height = formUi.findChild("height");
         heightUnit = formUi.findChild("heightUnit");
         heightUnitItem = freemedforms.forms.item("Subs::Tools::SOAP::WithBio::ObjectiveGroup::Height::Value");
-
-//      populateCombos();
-        
-        // Connect data changed on spins
-        // Spin should use valueChanged(int)
-        // DoubleSpin should use valueChanged(double)
-
-        syst['valueChanged(int)'].connect(this, computePulsePressure);          
-        diast['valueChanged(int)'].connect(this, computePulsePressure);
-
-        weight['valueChanged(double)'].connect(this, computeBMI);
-        height['valueChanged(double)'].connect(this, computeBMI);
-        weightUnit['currentIndexChanged(int)'].connect(this, computeBMI);
-        heightUnit['currentIndexChanged(int)'].connect(this, computeBMI);
-
-        // hide bmiValueLineEdit
         bmiValueLineEdit.visible = false;
     }
 
-//     function populateCombos() {                                                 
-       // TODO: add weight and height units                                    
-//        freemedforms.uiTools.addItems(cholCombo, totalCholRanges);            
-//        freemedforms.uiTools.addItems(hdlCombo, hdlCholRanges);               
-//        freemedforms.uiTools.addItems(systCombo, systolicRanges);             
-//    } 
-
-    function retranslateUi() {
-        var lang = freemedforms.forms.currentLanguage;
+    function soap_connectUiElements()
+    {
+        print("soap_connectUiElements()");
+        syst['valueChanged(int)'].connect(this, soap_computePulsePressure);
+        diast['valueChanged(int)'].connect(this, soap_computePulsePressure);
+        weight['valueChanged(double)'].connect(this, soap_computeBMI);
+        height['valueChanged(double)'].connect(this, soap_computeBMI);
+        weightUnit['currentIndexChanged(int)'].connect(this, soap_computeBMI);
+        heightUnit['currentIndexChanged(int)'].connect(this, soap_computeBMI);
     }
 
-    function computePulsePressure() {
-        var text = syst.value - diast.value;                                    
-        pulse.setText(text);                                                    
+//    function retranslateUi() {
+//        var lang = freemedforms.forms.currentLanguage;
+//    }
+
+    function soap_computePulsePressure() {
+        print("computePulsePressure()");
+        var text = syst.value - diast.value;
+        pulse.setText(text);
     }
 
-    function roundToOne(num) {
+    function soap_roundToOne(num) {
         return +(Math.round(num + "e+1")  + "e-1");
     }
 
-    function weightToKilogram(weightUnit, weightValue) {
+    function soap_weightToKilogram(weightUnit, weightValue) {
         var ounceToKilogram = 0.028349523125; //International avoirdupois ounce
         var poundToKilogram = 0.45359237; //International avoirdupois pound
         var gramToKilogram = 0.001;
@@ -89,7 +89,7 @@ namespace.module('com.freemedforms.generic.soapWithBio', function (exports, requ
         }
     }
 
-    function heightToMeter(heightUnit, heightValue) {
+    function soap_heightToMeter(heightUnit, heightValue) {
         var centimeterToMeter = 0.01;
         var inchToMeter = 0.0254;
         var footToMeter = 0.3048;
@@ -112,24 +112,25 @@ namespace.module('com.freemedforms.generic.soapWithBio', function (exports, requ
         }
     }
 
-    function computeBMI() {
+    function soap_computeBMI() {
+        print("soap_computeBMI()");
         var weightUnit = weightUnitItem.currentText;
         var weightValue = Number(weight.value);
-        var weightKilogram = weightToKilogram(weightUnit, weightValue);
+        var weightKilogram = soap_weightToKilogram(weightUnit, weightValue);
         var heightUnit = heightUnitItem.currentText;
         var heightValue = Number(height.value);
-        var heightMeter = heightToMeter(heightUnit, heightValue);
+        var heightMeter = soap_heightToMeter(heightUnit, heightValue);
         var bmi  = (weightKilogram) / ((heightMeter) * (heightMeter));
-        bmi = roundToOne(bmi);
+        bmi = soap_roundToOne(bmi);
         var textbmi = bmi.toString();
         if (!isNaN(bmi)) {
-        bmiValueLineEdit.setText(textbmi);
-        bmiValueLabel.setText(textbmi);
+            bmiValueLineEdit.setText(textbmi);
+            bmiValueLabel.setText(textbmi);
         } else {
-        bmiValueLineEdit.setText("");
-        bmiValueLabel.setText("");
+            bmiValueLineEdit.setText("");
+            bmiValueLabel.setText("");
         }
     }
 });
 
-namespace.com.freemedforms.generic.soapWithBio.setupUi();
+namespace.com.freemedforms.generic.soap_with_biomeasurements_version_2.setupUi();

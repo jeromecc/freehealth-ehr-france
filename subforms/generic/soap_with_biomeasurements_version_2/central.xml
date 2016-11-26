@@ -6,12 +6,12 @@
   <formdescription>
     <!-- Non translatable values -->
     <authors>Eric Maeker, MD ; Jerome Pinguet</authors>
-    <version>test</version>
-    <fmfv>0.9.7</fmfv>
+    <version>0.9.9</version>
+    <fmfv>0.9.9</fmfv>
     <cdate>2012-10-13</cdate>
-    <lmdate>2016-04-26</lmdate>
+    <lmdate>2016-11-26</lmdate>
     <icon>__theme__/stethoscope.png</icon>
-    <weblink></weblink>
+    <weblink>https://freemedsoft.com</weblink>
     <bibliography/>
 
     <!-- Translatable values -->
@@ -27,6 +27,18 @@
     <specialties lang="de">Tools</specialties>
 
     <updateinfo>
+    <updateversion from="0.8.4" to="0.9.9">
+      <text lang="fr">
+      Calcul IMC
+      Calcul pression pulsée
+      Amélioration de l'interface graphique utilisateur
+      </text>
+      <text lang="xx">
+      BMI calculation
+      Pulse pressure
+      Improve Graphic User Interface
+      </text>
+    </updateversion>
       <updateversion from="0.8.2" to="0.8.4">
         <text lang="fr">
         Gestion du poids et de la taille du patient
@@ -48,9 +60,9 @@
   <file type="script" name="onload">./scripts/xx/script.js</file>
 
   <MedForm name="Subs::Tools::SOAP::WithBio" uifilename="./ui/xx/soapbio.ui">
-    <label lang="xx">SOAP with biometrics</label>
-    <label lang="fr">POMR avec biométrie</label>
-    <label lang="de">SOAP mit Biometriedaten</label>
+    <label lang="xx">Consultation</label>
+    <label lang="fr">Consultation</label>
+    <label lang="de">Konsultation</label>
     <options>UseFormNameAsNameSpace</options>
     <icon>__theme__/stethoscope.png</icon>
     <file type="htmlprintmask">./html/xx/padtools_mask.html</file>

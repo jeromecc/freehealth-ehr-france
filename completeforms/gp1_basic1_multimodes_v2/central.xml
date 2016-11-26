@@ -6,12 +6,12 @@
   <formdescription>
     <!-- Non translatable values -->
     <authors>Eric Maeker, MD; Jerome Pinguet</authors>
-    <version>test</version>
+    <version>0.9.9</version>
     <fmfv>0.9.9</fmfv>
     <cdate>2012-09-03</cdate>
-    <lmdate>2016-11-24</lmdate>
+    <lmdate>2016-11-26</lmdate>
     <icon>generalpractitioner.png</icon>
-    <weblink></weblink>
+    <weblink>https://freemedsoft.com</weblink>
     <bibliography/>
 
     <!-- Translatable values -->
@@ -80,12 +80,12 @@
     <hprim>GP::Basic::Consultation::Results::Textual;GP::Basic::Consultation::LabResults::Textual</hprim>
 
   <MedForm name="GP::Basic::Consultation">
-    <label lang="xx">Consultations</label>
-    <label lang="en">Consultations</label>
+    <label>Consultations</label>
     <icon>__theme__/stethoscope.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
 
-    <file>__subForms__/generic/soap_with_biomeasurements_version_2/central.xml</file>
+    <!-- form soap_with_biomeasurements_version_2 should be added manually
+         to allow automatic script triggering (BMI and pulse pressure) -->
 
     <MedForm name="GP::Basic::Consultation::Reports">
       <label lang="xx">Consultation reports</label>

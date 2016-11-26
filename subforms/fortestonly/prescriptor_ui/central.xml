@@ -6,12 +6,12 @@
   <formdescription>
     <!-- Non translatable values -->
     <authors>Pinguet Jerome</authors>
-    <version>test</version>
+    <version>0.9.9</version>
     <fmfv>0.9.9</fmfv>
     <cdate>2016-04-30</cdate>
     <lmdate>2016-04-30</lmdate>
     <icon>test.png</icon>
-    <weblink></weblink>
+    <weblink>https://freemedsoft.com</weblink>
     <bibliography pmid=""></bibliography>
 
     <!-- Translatable values -->

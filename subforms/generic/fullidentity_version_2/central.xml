@@ -6,12 +6,12 @@
   <formdescription>
     <!-- Non translatable values -->
     <authors>Eric Maeker, MD ; Jerome Pinguet</authors>
-    <version>test</version>
+    <version>0.9.9</version>
     <fmfv>0.8.4</fmfv>
     <cdate>2012-01-01</cdate>
-    <lmdate>2016-04-26</lmdate>
+    <lmdate>2016-11-26</lmdate>
     <icon>__theme__/identity.png</icon>
-    <weblink></weblink>
+    <weblink>https://freemedsoft.com</weblink>
     <bibliography/>
 
     <!-- Translatable values -->
