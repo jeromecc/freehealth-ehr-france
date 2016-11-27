@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+<FreeMedForms>
+
+ <formdescription>
+  <!-- Non translatable values -->
+  <authors>Eric Maeker, MD; Jerome Pinguet</authors>
+  <version>0.9.9</version>
+  <fmfv>0.9.9</fmfv>
+  <cdate>2012-09-03</cdate>
+  <lmdate>2016-11-27</lmdate>
+  <icon>generalpractitioner.png</icon>
+  <weblink>https://freemedsoft.com</weblink>
+  <bibliography/>
+
+  <!-- Translatable values -->
+  <license>GPLv3</license>
+  <description lang="xx">Textual consultation reports</description>
+  <description lang="fr">Comptes-rendus de consultation textuels</description>
+
+  <category lang="xx">Generic tools</category>
+  <category lang="fr">Outils généraux</category>
+  <specialties lang="xx">Tools</specialties>
+  <specialties lang="fr">Outils</specialties>
+
+ </formdescription>
+
+ <MedForm name="GP::Basic::Consultation::Reports">
+  <label lang="xx">Consultation reports</label>
+  <label lang="fr">Comptes-rendus de consultation</label>
+  <icon>__theme__/edit.png</icon>
+  <options>DontPrintEmptyValues</options>
+  <file type="htmlprintmask">./html/xx/consultation_report.html</file>
+  <file type="htmlexportmask">./html/xx/consultation_report.html</file>
+
+  <Item type="texteditor" name="GP::Basic::Consultation::Reports::Textual">
+  <label lang="xx">Consultation</label>
+  <label lang="fr">Consultation</label>
+  <tooltip lang="xx">You can add here results from XRay, specialists consultations...</tooltip>
+  <tooltip lang="fr">Vous pouvez mettre ici les résultats de radiologie, consultations spécialisées...</tooltip>
+  <options>FullEditor;WithIO;WithTable;Expanded;DontPrintEmptyValues;PrintDuplicata</options>
+  <papers>Generic</papers>
+  <hprim>true</hprim>
+  </Item>
+ </MedForm>
+</FreeMedForms>

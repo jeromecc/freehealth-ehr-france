@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+<FreeMedForms>
+
+ <formdescription>
+  <!-- Non translatable values -->
+  <authors>Eric Maeker, MD; Jerome Pinguet</authors>
+  <version>0.9.9</version>
+  <fmfv>0.9.9</fmfv>
+  <cdate>2012-09-03</cdate>
+  <lmdate>2016-11-27</lmdate>
+  <icon>generalpractitioner.png</icon>
+  <weblink>https://freemedsoft.com</weblink>
+  <bibliography/>
+
+  <!-- Translatable values -->
+  <license>GPLv3</license>
+  <description lang="xx">Textual laboratory test results</description>
+  <description lang="fr">Résultats d'analyse biologique textuels</description>
+
+  <category lang="xx">Generic tools</category>
+  <category lang="fr">Outils généraux</category>
+  <specialties lang="xx">Tools</specialties>
+  <specialties lang="fr">Outils</specialties>
+
+ </formdescription>
+
+ <MedForm name="GP::Basic::Consultation::LabResults">
+  <label lang="xx">Laboratory test results</label>
+  <label lang="fr">Résultats de biologie textuels</label>
+  <icon>__theme__/labtest.png</icon>
+  <options>DontPrintEmptyValues</options>
+  <file type="htmlprintmask">./html/xx/consultation_report.html</file>
+  <file type="htmlexportmask">./html/xx/consultation_report.html</file>
+
+  <Item type="texteditor" name="GP::Basic::Consultation::LabResults::Textual">
+  <label lang="xx">Lab test result</label>
+  <label lang="fr">Résultat d'analyse biologique</label>
+  <tooltip lang="xx">Add your lab tests results here...</tooltip>
+  <tooltip lang="fr">Vous pouvez mettre ici les résultats de biologie...</tooltip>
+  <options>FullEditor;WithIO;WithTable;Expanded;DontPrintEmptyValues</options>
+  <papers>Generic</papers>
+  <hprim>true</hprim>
+  </Item>
+ </MedForm>
+</FreeMedForms>

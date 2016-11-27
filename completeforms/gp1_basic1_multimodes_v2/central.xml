@@ -9,7 +9,7 @@
     <version>0.9.9</version>
     <fmfv>0.9.9</fmfv>
     <cdate>2012-09-03</cdate>
-    <lmdate>2016-11-26</lmdate>
+    <lmdate>2016-11-27</lmdate>
     <icon>generalpractitioner.png</icon>
     <weblink>https://freemedsoft.com</weblink>
     <bibliography/>
@@ -87,65 +87,17 @@
     <!-- form soap_with_biomeasurements_version_2 should be added manually
          to allow automatic script triggering (BMI and pulse pressure) -->
 
-    <MedForm name="GP::Basic::Consultation::Reports">
-      <label lang="xx">Consultation reports</label>
-      <label lang="fr">Compte-rendus de consultation</label>
-      <icon>__theme__/edit.png</icon>
-      <options>DontPrintEmptyValues</options>
-      <file type="htmlprintmask">./html/xx/padtools_consultation_results_mask.html</file>
-      <file type="htmlexportmask">./html/xx/padtools_consultation_results_mask.html</file>
+    <!-- consultation_report form should be added manually
+     to allow control of form order in tree view -->
 
-      <Item type="texteditor" name="GP::Basic::Consultation::Reports::Textual">
-        <label lang="xx">Textual results</label>
-        <label lang="fr">Résultats textuels</label>
-        <tooltip lang="xx">You can add here results from XRay, specialists consultations...</tooltip>
-        <tooltip lang="fr">Vous pouvez mettre ici les résultats de radiologie, consultations spécialisées...</tooltip>
-        <options>FullEditor;WithIO;WithTable;Expanded;DontPrintEmptyValues;PrintDuplicata</options>
-        <papers>Generic</papers>
-        <hprim>true</hprim>
-      </Item>
+    <!-- labtest_result_textual form should be added manually
+    to allow control of form order in tree view -->
 
-      </MedForm>
+    <!-- labtest_results form should be added manually
+    to allow control of form order in tree view -->
 
-      <MedForm name="GP::Basic::Consultation::LabResults">
-        <label lang="xx">Lab-tests results (textual)</label>
-        <label lang="fr">Résultats de biologie (textuels)</label>
-        <icon>__theme__/labtest.png</icon>
-        <options>DontPrintEmptyValues</options>
-        <file type="htmlprintmask">./html/xx/padtools_consultation_results_mask.html</file>
-        <file type="htmlexportmask">./html/xx/padtools_consultation_results_mask.html</file>
-
-        <Item type="texteditor" name="GP::Basic::Consultation::LabResults::Textual">
-          <label lang="xx">Textual results</label>
-          <label lang="fr">Résultats textuels</label>
-          <tooltip lang="xx">You can add here results from XRay, specialists consultations...</tooltip>
-          <tooltip lang="fr">Vous pouvez mettre ici les résultats de radiologie, consultations spécialisées...</tooltip>
-          <options>FullEditor;WithIO;WithTable;Expanded;DontPrintEmptyValues;PrintDuplicata</options>
-          <papers>Generic</papers>
-          <hprim>true</hprim>
-        </Item>
-
-      </MedForm>
-
-      <file>__subForms__/generic/labtest_results/central.xml</file>
-
-    <MedForm name="GP::Basic::Consultation::Results">
-      <label lang="xx">Various reports</label>
-      <label lang="fr">Compte-rendus divers</label>
-      <icon>__theme__/edit.png</icon>
-      <options>DontPrintEmptyValues</options>
-      <file type="htmlprintmask">./html/xx/padtools_consultation_results_mask.html</file>
-      <file type="htmlexportmask">./html/xx/padtools_consultation_results_mask.html</file>
-
-      <Item type="texteditor" name="GP::Basic::Consultation::Results::Textual">
-        <label lang="xx">Textual results</label>
-        <label lang="fr">Résultats textuels</label>
-        <options>FullEditor;WithIO;WithTable;Expanded;DontPrintEmptyValues;PrintDuplicata</options>
-        <papers>Generic</papers>
-        <hprim>true</hprim>
-      </Item>
-
-      </MedForm>
+    <!-- various_report form should be added manually
+    to allow control of form order in tree view -->
 
   </MedForm> <!-- Consultation -->
 
