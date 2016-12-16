@@ -314,11 +314,18 @@ p, li { white-space: pre-wrap; }
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="headerLineEdit">
+    <widget class="QLineEdit" name="interHeaderLineEdit">
      <property name="visible">
       <bool>false</bool>
      </property>
     </widget>
+   </item>
+   <item>                                                                       
+    <widget class="QLineEdit" name="exoHeaderLineEdit">                            
+     <property name="visible">                                                  
+      <bool>false</bool>                                                        
+     </property>                                                                
+    </widget>                                                                   
    </item>
   </layout>
  </widget>

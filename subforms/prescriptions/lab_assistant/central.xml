@@ -35,17 +35,17 @@
   <file type="htmlprintmask">./html/xx/bizone.html</file>
   <file type="htmlexportmask">./html/xx/bizone.html</file>
 
-<Item name="Bizone::Check" type="check">
-  <uilink widget="bizoneCheckBox"/>
-  <options></options>
-  <value>
-    <uuid id="0"></uuid>
-    <uuid id="1">1</uuid>
-  </value>
-<script>
-  <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
-</script>
-</Item>
+<Item name="Bizone::Check" type="check">                                        
+  <uilink widget="bizoneCheckBox"/>                                             
+  <options></options>                                                           
+  <value>                                                                       
+    <uuid id="0"></uuid>                                                        
+    <uuid id="1">1</uuid>                                                       
+  </value>                                                                      
+<script>                                                                        
+  <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_getUiElements();</onValueChanged>
+</script>                                                                       
+</Item> 
 
 <Item name="Bizone::Group" type="group">
   <uilink widget="bizoneGroupBox"/>
@@ -56,9 +56,6 @@
     <uuid id="0">0</uuid>
     <uuid id="1">1</uuid>
   </value>
-<script>
-  <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
-</script>
 </Item>
 
 <!--Item name="Radio" type="radio">
@@ -248,8 +245,12 @@
     <uilink widget="warningLineEdit"/>
     </Item-->
 
-    <Item name="Header" type="shorttext">
-    <uilink widget="headerLineEdit"/>
+    <Item name="Inter::Header" type="shorttext">
+    <uilink widget="interHeaderLineEdit"/>
+    </Item>
+
+    <Item name="Exo::Header" type="shorttext">
+    <uilink widget="exoHeaderLineEdit"/>
     </Item>
 
         <Item type="detailswidget" name="Complete::List" uifilename="./ui/xx/basics_inter.ui">
@@ -486,7 +487,7 @@
                     <possible id="10" lang="fr">Anticorps anti-Hépatite B</possible>
                     <possible id="11" lang="fr">Antigènes anti-Hépatite B S (anti-HBs)</possible>
                     <possible id="12" lang="fr">Anticorps anti-Hépatite C</possible>
-                    <possible id="13" lang="fr">Charge virale Hépatite C viral load</possible>
+                    <possible id="13" lang="fr">Charge virale Hépatite C</possible>
                     <possible id="14" lang="fr">Anticorps anti-Hépatite D</possible>
                     <possible id="15" lang="fr">Anticorps anti-Hépatite E</possible>
 
@@ -758,8 +759,8 @@
                     <possible id="8" lang="fr">Sérologie Parvovirus B19</possible>
                     <possible id="9" lang="fr">Anticorps anti Rubella, IgG</possible>
                     <possible id="10" lang="fr">Anticorps anti Rubéole, IgG</possible>
-                    <possible id="11" lang="fr">Ancticorps anti Toxoplasma Gondii, IgG</possible>
-                    <possible id="12" lang="fr">Tetanus Antibodies Profile</possible>
+                    <possible id="11" lang="fr">Anticorps anti Toxoplasma Gondii, IgG</possible>
+                    <possible id="12" lang="fr">Tétanos (SERODIAGNOSTIC PAR EIA)</possible>
                     <possible id="13" lang="fr">Anticorps anti-VZV, IgG</possible>
                     <possible id="14" lang="fr">West Nile Virus, PCR</possible>
                     <possible id="15" lang="fr">Syphilis - Rapid Plasma Reagin (RPR)</possible>
