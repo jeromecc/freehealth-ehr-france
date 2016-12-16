@@ -30,7 +30,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="hemato">
+      <widget class="QListView" name="hemato_exo">
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
@@ -56,7 +56,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="electrolytes">
+      <widget class="QListView" name="electrolytes_exo">
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
@@ -82,7 +82,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="prots">
+      <widget class="QListView" name="prots_exo">
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
@@ -108,7 +108,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="metabolic">
+      <widget class="QListView" name="metabolic_exo">
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
@@ -151,7 +151,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="coag">
+      <widget class="QListView" name="coag_exo">
        <property name="verticalScrollBarPolicy">
         <enum>Qt::ScrollBarAlwaysOff</enum>
        </property>
@@ -180,7 +180,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="kidney">
+      <widget class="QListView" name="kidney_exo">
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
@@ -206,7 +206,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="liver">
+      <widget class="QListView" name="liver_exo">
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
@@ -249,7 +249,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="tumor">
+      <widget class="QListView" name="tumor_exo">
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
@@ -275,7 +275,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="iron">
+      <widget class="QListView" name="iron_exo">
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
@@ -301,7 +301,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="thyroid">
+      <widget class="QListView" name="thyroid_exo">
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
@@ -327,7 +327,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="serologies">
+      <widget class="QListView" name="serologies_exo">
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
@@ -370,7 +370,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="prostate">
+      <widget class="QListView" name="prostate_exo">
        <property name="verticalScrollBarPolicy">
         <enum>Qt::ScrollBarAlwaysOff</enum>
        </property>
@@ -399,7 +399,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="vitamins">
+      <widget class="QListView" name="vitamins_exo">
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
@@ -425,7 +425,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="biermer">
+      <widget class="QListView" name="biermer_exo">
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
@@ -451,7 +451,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="pr">
+      <widget class="QListView" name="pr_exo">
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
