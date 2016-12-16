@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+  <formdescription>
+    <!-- Non translatable values -->
+    <authors>Jerome Pinguet</authors>
+    <version>test</version>
+    <fmfv>0.9.9</fmfv>
+    <cdate>2016-10-19</cdate>
+    <lmdate>2016-10-19</lmdate>
+    <icon>__theme__/stethoscope.png</icon>
+    <weblink>https://www.medecinelibre.com</weblink>
+    <bibliography/>
+
+    <!-- Translatable values -->
+    <license>GPLv3</license>
+    <description lang="xx">Past Medical History</description>
+    <description lang="fr">Antécédents</description>
+    <category lang="xx">Generic tools</category>
+    <category lang="fr">Outils généraux</category>
+    <specialties lang="xx">Tools</specialties>
+    <specialties lang="fr">Outils</specialties>
+
+    <updateinfo>
+      <updateversion from="" to="0.9.9">
+        <text lang="xx">First version</text>
+        <text lang="fr">Première version</text>
+      </updateversion>
+    </updateinfo>
+
+  </formdescription>
+
+  <!--file type="script" name="onload">./scripts/xx/script.js</file-->
+
+  <MedForm name="Chave::Past::Medical::History" uifilename="./ui/xx/pmh.ui">
+    <label lang="xx">Past Medical History</label>
+    <label lang="fr">Antécédents</label>
+    <options>unique;UseFormNameAsNameSpace</options>
+    <icon>__theme__/stethoscope.png</icon>
+    <!--file type="htmlprintmask">./html/xx/padtools_mask.html</file-->
+    <!--file type="htmlexportmask">./html/xx/padtools_mask.html</file-->
+
+    <Item type="group" name="VariousGroup">
+      <uilink widget="variousGroup"/>
+      <label lang="xx">Renseignements divers</label>
+      <label lang="fr">Various data</label>
+      <options>DontPrintEmptyValues</options>
+
+        <Item type="texteditor" name="Various">
+          <uilink label="" widget="" layout="variousLayout"/>
+          <tooltip lang="xx">Divers</tooltip>
+          <tooltip lang="fr">Various</tooltip>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+    </Item>
+
+    <Item type="group" name="AllergyGroup">
+      <uilink widget="allergyGroup"/>
+      <label lang="xx">Allergy</label>
+      <label lang="fr">Allergie</label>
+      <options>DontPrintEmptyValues</options>
+
+        <Item type="texteditor" name="Allergy">
+          <uilink label="" widget="" layout="allergyLayout"/>
+          <tooltip lang="xx">Allergy</tooltip>
+          <tooltip lang="fr">Allergie</tooltip>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+    </Item>
+
+    <Item type="group" name="MedicalGroup">
+      <uilink widget="medicalGroup"/>
+      <label lang="xx">Medical</label>
+      <label lang="fr">Médical</label>
+      <options>DontPrintEmptyValues</options>
+
+        <Item type="texteditor" name="Medical">
+          <uilink label="" widget="" layout="medicalLayout"/>
+          <tooltip lang="xx">Medical PMH</tooltip>
+          <tooltip lang="fr">Antécédents médicaux</tooltip>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+    </Item>
+
+    <Item type="group" name="SurgicalGroup">
+      <uilink widget="surgicalGroup"/>
+      <label lang="xx">Surgical</label>
+      <label lang="fr">Chirugical</label>
+      <options>DontPrintEmptyValues</options>
+
+        <Item type="texteditor" name="Surgical">
+          <uilink label="" widget="" layout="surgicalLayout"/>
+          <options>DontPrintEmptyValues</options>
+          <tooltip lang="xx">Surgical PMH</tooltip>
+          <tooltip lang="fr">Antécédents chirurgicaux</tooltip>
+        </Item>
+
+    </Item>
+
+    <Item type="group" name="FamilyGroup">
+      <uilink widget="familyGroup"/>
+      <label lang="xx">Family</label>
+      <label lang="fr">Familial</label>
+      <options>DontPrintEmptyValues</options>
+
+        <Item type="texteditor" name="Family">
+          <uilink label="" widget="" layout="familyLayout"/>
+          <tooltip lang="xx">Family PMH</tooltip>
+          <tooltip lang="fr">Antécédents familiaux</tooltip>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+    </Item>
+
+        <Item type="group" name="ContraceptionGroup">
+          <uilink widget="contraceptionGroup"/>
+          <label lang="xx">Contraception, Hormonal Replacement Therapy</label>
+          <label lang="fr">Contraception, traitement hormonal substitutif</label>
+          <options>DontPrintEmptyValues</options>
+
+            <Item type="texteditor" name="Contraception">
+              <uilink label="" widget="" layout="contraceptionLayout"/>
+              <tooltip lang="xx">Contraception, Hormonal Replacement Therapy PMH</tooltip>
+              <tooltip lang="fr">Antécédent de traitement contraceptif ou de traitement hormonal substitutif</tooltip>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item>
+
+  </MedForm>
+
+</FreeMedForms>
