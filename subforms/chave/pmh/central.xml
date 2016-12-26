@@ -6,7 +6,7 @@
   <formdescription>
     <!-- Non translatable values -->
     <authors>Jerome Pinguet</authors>
-    <version>test</version>
+    <version>4.0.0</version>
     <fmfv>0.9.9</fmfv>
     <cdate>2016-10-19</cdate>
     <lmdate>2016-10-19</lmdate>
@@ -39,17 +39,17 @@
     <label lang="fr">Antécédents</label>
     <options>unique;UseFormNameAsNameSpace</options>
     <icon>__theme__/stethoscope.png</icon>
-    <!--file type="htmlprintmask">./html/xx/padtools_mask.html</file-->
-    <!--file type="htmlexportmask">./html/xx/padtools_mask.html</file-->
+    <file type="htmlprintmask">./html/xx/pmharchive.html</file>
+    <file type="htmlexportmask">./html/xx/pmharchive.html</file>
 
     <Item type="group" name="VariousGroup">
       <uilink widget="variousGroup"/>
-      <label lang="xx">Renseignements divers</label>
-      <label lang="fr">Various data</label>
+      <label lang="fr">Renseignements divers</label>
+      <label lang="xx">Various data</label>
       <options>DontPrintEmptyValues</options>
 
-        <Item type="texteditor" name="Various">
-          <uilink label="" widget="" layout="variousLayout"/>
+        <Item type="longtext" name="Various">
+          <uilink label="" widget="variousTextEdit" layout=""/>
           <tooltip lang="xx">Divers</tooltip>
           <tooltip lang="fr">Various</tooltip>
           <options>DontPrintEmptyValues</options>
@@ -63,8 +63,8 @@
       <label lang="fr">Allergie</label>
       <options>DontPrintEmptyValues</options>
 
-        <Item type="texteditor" name="Allergy">
-          <uilink label="" widget="" layout="allergyLayout"/>
+        <Item type="longtext" name="Allergy">
+          <uilink label="" widget="allergyTextEdit" layout=""/>
           <tooltip lang="xx">Allergy</tooltip>
           <tooltip lang="fr">Allergie</tooltip>
           <options>DontPrintEmptyValues</options>
@@ -78,8 +78,8 @@
       <label lang="fr">Médical</label>
       <options>DontPrintEmptyValues</options>
 
-        <Item type="texteditor" name="Medical">
-          <uilink label="" widget="" layout="medicalLayout"/>
+        <Item type="longtext" name="Medical">
+          <uilink label="" widget="medicalTextEdit" layout=""/>
           <tooltip lang="xx">Medical PMH</tooltip>
           <tooltip lang="fr">Antécédents médicaux</tooltip>
           <options>DontPrintEmptyValues</options>
@@ -93,8 +93,8 @@
       <label lang="fr">Chirugical</label>
       <options>DontPrintEmptyValues</options>
 
-        <Item type="texteditor" name="Surgical">
-          <uilink label="" widget="" layout="surgicalLayout"/>
+        <Item type="longtext" name="Surgical">
+          <uilink label="" widget="surgicalTextEdit" layout=""/>
           <options>DontPrintEmptyValues</options>
           <tooltip lang="xx">Surgical PMH</tooltip>
           <tooltip lang="fr">Antécédents chirurgicaux</tooltip>
@@ -108,8 +108,8 @@
       <label lang="fr">Familial</label>
       <options>DontPrintEmptyValues</options>
 
-        <Item type="texteditor" name="Family">
-          <uilink label="" widget="" layout="familyLayout"/>
+        <Item type="longtext" name="Family">
+          <uilink label="" widget="familyTextEdit" layout=""/>
           <tooltip lang="xx">Family PMH</tooltip>
           <tooltip lang="fr">Antécédents familiaux</tooltip>
           <options>DontPrintEmptyValues</options>
@@ -123,8 +123,8 @@
           <label lang="fr">Contraception, traitement hormonal substitutif</label>
           <options>DontPrintEmptyValues</options>
 
-            <Item type="texteditor" name="Contraception">
-              <uilink label="" widget="" layout="contraceptionLayout"/>
+            <Item type="longtext" name="Contraception">
+              <uilink label="" widget="contraceptionTextEdit" layout=""/>
               <tooltip lang="xx">Contraception, Hormonal Replacement Therapy PMH</tooltip>
               <tooltip lang="fr">Antécédent de traitement contraceptif ou de traitement hormonal substitutif</tooltip>
               <options>DontPrintEmptyValues</options>

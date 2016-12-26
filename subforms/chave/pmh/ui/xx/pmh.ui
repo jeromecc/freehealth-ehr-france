@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>570</width>
-    <height>673</height>
+    <height>1000</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,7 +21,14 @@
      </property>
      <layout class="QGridLayout" name="gridLayout_4">
       <item row="0" column="0">
-       <layout class="QHBoxLayout" name="variousLayout"/>
+       <widget class="QTextEdit" name="variousTextEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -33,7 +40,14 @@
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0">
-       <layout class="QHBoxLayout" name="allergyLayout"/>
+       <widget class="QTextEdit" name="allergyTextEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -45,7 +59,7 @@
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
-       <layout class="QHBoxLayout" name="medicalLayout"/>
+       <widget class="QTextEdit" name="medicalTextEdit"/>
       </item>
      </layout>
     </widget>
@@ -57,7 +71,7 @@
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
       <item row="0" column="0">
-       <layout class="QHBoxLayout" name="surgicalLayout"/>
+       <widget class="QTextEdit" name="surgicalTextEdit"/>
       </item>
      </layout>
     </widget>
@@ -69,7 +83,7 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <layout class="QHBoxLayout" name="familyLayout"/>
+       <widget class="QTextEdit" name="familyTextEdit"/>
       </item>
      </layout>
     </widget>
@@ -81,7 +95,7 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
-       <layout class="QHBoxLayout" name="contraceptionLayout"/>
+       <widget class="QTextEdit" name="contraceptionTextEdit"/>
       </item>
      </layout>
     </widget>
