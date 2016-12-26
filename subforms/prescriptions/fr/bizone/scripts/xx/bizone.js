@@ -42,7 +42,6 @@ namespace.module('com.freemedforms.prescriptions.fr.bizone', function (exports, 
 
 
 function bz_getUiElements() {
-        print("hello");
         freemedforms.forms.namespaceInUse = "";
         var formUi = freemedforms.forms.item("GP::Basic::Prescr::Text");
         freemedforms.forms.namespaceInUse = "GP::Basic::Prescr::Text";
@@ -58,7 +57,6 @@ function bz_getUiElements() {
         bz_warningItem = freemedforms.forms.item("Warning");
         bz_affectionExoneranteHeaderTextEdit = ui.findChild("affectionExoneranteHeaderTextEdit");
         bz_maladiesIntercurrentesHeaderTextEdit = ui.findChild("maladiesIntercurrentesHeaderTextEdit");
-        //bz_radioItem = freemedforms.forms.item("Radio");
         bz_bizoneCollapsibleGroupItem = freemedforms.forms.item("Bizone::Group");
         bz_bizoneCollapsibleGroupUi = ui.findChild("bizoneGroupBox");
         bz_bizoneWarningLabelUi = ui.findChild("bizoneWarningLabel");
@@ -67,32 +65,15 @@ function bz_getUiElements() {
 function bz_connectUiElements()
     {
         bz_bizoneCollapsibleGroupUi['toggled(bool)'].connect(this, bz_onCheckChanged);
-        //bz_bizoneCheckUi['stateChanged(int)'].connect(this, bz_onCheckChanged);
     }
 
 function bz_onCheckChanged()
 {
-    print("function bz_onCheckChanged()");
 
-    print("bz_bizoneCollapsibleGroupItem", bz_bizoneCollapsibleGroupItem);
-    print("bz_bizoneCollapsibleGroupItem.currentUuid", bz_bizoneCollapsibleGroupItem.currentUuid);
-    print("bz_bizoneCollapsibleGroupItem.enabled", bz_bizoneCollapsibleGroupItem.enabled);
-    print("bz_bizoneCollapsibleGroupItem.checked", bz_bizoneCollapsibleGroupItem.checked);
-    print("bz_bizoneCollapsibleGroupItem.currentValue", bz_bizoneCollapsibleGroupItem.currentValue);
-    print("bz_bizoneCollapsibleGroupItem.currentText", bz_bizoneCollapsibleGroupItem.currentText);
-
-    print ("bz_bizoneCheckItem.enabled: ", bz_bizoneCheckItem.enabled);
-    print ("bz_bizoneCheckItem.checked: ", bz_bizoneCheckItem.checked);
-    print ("bz_bizoneCheckItem.currentUuid: ", bz_bizoneCheckItem.currentUuid);
-    print ("bz_bizoneCheckItem.currentValue: ", bz_bizoneCheckItem.currentValue);
-    print ("bz_bizoneCheckItem.currentText: ", bz_bizoneCheckItem.currentText);
-    print ("typeof bz_bizoneCheckItem.checked", typeof bz_bizoneCheckItem.check);
     var checkValue = bz_bizoneCheckItem.checked;
 
-    print ("typeof radioValue", typeof checkValue);
-
     if (checkValue === false) {
-        print("checkValue: ",checkValue);
+        bz_warningUi.visible = false;
         bz_headerItem.currentText = "print";
         bz_affectionExoneranteHeaderTextEdit.visible = false;
         bz_maladiesIntercurrentesHeaderTextEdit.visible = false;
@@ -108,10 +89,11 @@ function bz_onCheckChanged()
             }
         }
      } else {
-        print ("checkValue: ", checkValue);
         // delete warning about the need to delete ALD order
         bz_warningItem.currentText = "";
         bz_warningUi.visible = false;
+        bz_warningUi.clear();
+        bz_warningUi.hide();
 
         // delete the headerItem that triggers printing of non ALD order header
         bz_headerItem.currentText = "";
