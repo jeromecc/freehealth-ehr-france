@@ -28,8 +28,8 @@
   <file type="script" name="onload">./scripts/xx/bizone.js</file>
 
 <MedForm name="Subs::Tools::LabTests" uifilename="./ui/xx/bizone.ui">
-  <label lang="xx">Lab tests prescription v2</label>
-  <label lang="fr">Prescription d'analyse biologique 2</label>
+  <label lang="xx">Lab tests prescription</label>
+  <label lang="fr">Prescription d'analyse biologique</label>
   <icon>__theme__/labtest.png</icon>
   <options>DontPrintEmptyValues;UseFormNameAsNameSpace;NoHeader</options>
   <file type="htmlprintmask">./html/xx/bizone.html</file>
