@@ -5,10 +5,10 @@
   <formdescription>
     <!-- Non translatable values -->
     <authors>Jerome Pinguet</authors>
-    <version>4.0.0</version>
+    <version>5.0.0</version>
     <fmfv>0.9.7</fmfv>
     <cdate>2016-11-17</cdate>
-    <lmdate>2016-11-28</lmdate>
+    <lmdate>2016-11-29</lmdate>
     <icon>generalpractitioner.png</icon>
     <weblink>https://medecinelibre.com</weblink>
     <bibliography/>

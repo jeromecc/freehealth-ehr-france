@@ -25,7 +25,6 @@ namespace.module('com.freemedforms.generic.soap_with_biomeasurements_version_2',
     }
 
     function soap_getUiElements() {
-        print("soap_getUiElements()");
         freemedforms.forms.namespaceInUse = "";
         var formItem = freemedforms.forms.item("Subs::Tools::SOAP::WithBio");
         var formUi = formItem.ui();
@@ -45,7 +44,6 @@ namespace.module('com.freemedforms.generic.soap_with_biomeasurements_version_2',
 
     function soap_connectUiElements()
     {
-        print("soap_connectUiElements()");
         syst['valueChanged(int)'].connect(this, soap_computePulsePressure);
         diast['valueChanged(int)'].connect(this, soap_computePulsePressure);
         weight['valueChanged(double)'].connect(this, soap_computeBMI);
@@ -59,7 +57,6 @@ namespace.module('com.freemedforms.generic.soap_with_biomeasurements_version_2',
 //    }
 
     function soap_computePulsePressure() {
-        print("computePulsePressure()");
         var text = syst.value - diast.value;
         pulse.setText(text);
     }
@@ -113,7 +110,6 @@ namespace.module('com.freemedforms.generic.soap_with_biomeasurements_version_2',
     }
 
     function soap_computeBMI() {
-        print("soap_computeBMI()");
         var weightUnit = weightUnitItem.currentText;
         var weightValue = Number(weight.value);
         var weightKilogram = soap_weightToKilogram(weightUnit, weightValue);
