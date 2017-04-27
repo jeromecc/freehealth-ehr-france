@@ -71,7 +71,7 @@ function bz_onCheckChanged()
 {
 
     var checkValue = bz_bizoneCheckItem.checked;
-
+    print("checkValue = ", checkValue);
     if (checkValue === false) {
         bz_warningUi.visible = false;
         bz_headerItem.currentText = "print";
@@ -113,6 +113,7 @@ function bz_onCheckChanged()
 function bz_header()
 {
     var checkValue = bz_bizoneCheckItem.checked;
+    print("checkvalue = ", checkValue);
     if (checkValue === false) {
         bz_headerItem.currentText = "print";
     } else {

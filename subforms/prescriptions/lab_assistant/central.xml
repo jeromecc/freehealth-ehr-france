@@ -5,10 +5,10 @@
   <formdescription>
     <!-- Non translatable values -->
     <authors>Jerome Pinguet</authors>
-    <version>2.0.0</version>
-    <fmfv>0.9.9</fmfv>
+    <version>3.0.0</version>
+    <fmfv>0.10.0</fmfv>
     <cdate>2016-11-17</cdate>
-    <lmdate>2016-12-12</lmdate>
+    <lmdate>2017-04-22</lmdate>
     <icon>generalpractitioner.png</icon>
     <weblink>https://medecinelibre.com</weblink>
     <bibliography/>
@@ -42,9 +42,9 @@
     <uuid id="0"></uuid>                                                        
     <uuid id="1">1</uuid>                                                       
   </value>                                                                      
-<script>                                                                        
-  <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_getUiElements();</onValueChanged>
-</script>                                                                       
+  <!--<script>
+  <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+  </script>-->
 </Item> 
 
 <Item name="Bizone::Group" type="group">
@@ -58,7 +58,7 @@
   </value>
 </Item>
 
-<!--Item name="Radio" type="radio">
+<!--<Item name="Radio" type="radio">
 <uilink layout="bizoneRadioLayout"/>
 <value>
   <uuid id="0"></uuid>
@@ -78,7 +78,7 @@
 <script>
   <onValueChanged>namespace.com.freemedforms.prescriptions.fr.bizone.bz_onRadioChanged();</onValueChanged>
 </script>
-</Item-->
+</Item>-->
 
 
   <!--Item name="FileNavigationButton" type="buttonmenupath">
@@ -98,6 +98,9 @@
   <label lang="xx"></label>
   <label lang="fr"></label>
   <options>DontPrintEmptyValues;FullEditor</options>
+  <script>
+  <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+  </script>
 </Item>
 
     <!--Item name="maladiesIntercurrentesFileNavigationButton" type="buttonmenupath">
@@ -170,6 +173,9 @@
         <possible id="17" lang="xx">EX MICROBIO URINES (ECBU)</possible>
         </value>
         <options>DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Frequent::Inter">
@@ -231,6 +237,9 @@
         <possible id="17" lang="xx">EX MICROBIO URINES (ECBU)</possible>
         </value>
         <options>DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item name="Maladies::Intercurrentes" type="texteditor">
@@ -239,6 +248,9 @@
       <label lang="fr"></label>
       <options>DontPrintEmptyValues;FullEditor</options>
       <papers>Prescription</papers>
+      <script>
+      <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+      </script>
     </Item>
 
     <!--Item name="Warning" type="shorttext">
@@ -302,6 +314,9 @@
                     <possible id="11" lang="fr">Test de Coombs indirect</possible>
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
             <Item type="multilist" name="Basics::Coagulation">
@@ -331,6 +346,9 @@
 
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
             <Item type="multilist" name="Basics::Electrolytes">
@@ -381,6 +399,9 @@
 
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
             <Item type="multilist" name="Basics::Kidney">
@@ -405,6 +426,9 @@
                     <possible id="2" lang="de">Kreatinin &amp; Kreatinin-Clearance</possible>
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
             <Item type="multilist" name="Basics::Proteins">
@@ -433,6 +457,9 @@
                     <possible id="3" lang="de">CRP (C-Reaktives Protein)</possible>
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
             <Item type="multilist" name="Basics::Liver">
@@ -509,6 +536,9 @@
                     <possible id="15" lang="de">Anticorps anti-Hépatite E</possible>
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
             <Item type="multilist" name="Basics::Metabolic">
@@ -551,6 +581,9 @@
                     <possible id="10" lang="fr">Microalbuminurie</possible>
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
             <Item type="multilist" name="Basics::Cancer">
@@ -584,6 +617,9 @@
                     <possible id="7" lang="fr">bêta HCG</possible>
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
             <Item type="multilist" name="Basics::Iron">
@@ -605,6 +641,9 @@
                     <possible id="3" lang="fr">Coefficient de saturation de la sidérophiline</possible>
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
             <Item type="multilist" name="Basics::Prostate">
@@ -623,6 +662,9 @@
                     <possible id="2" lang="fr">Prostatic acid phosphatase (PAP)</possible>
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
             <Item type="multilist" name="Basics::Vitamins">
@@ -650,6 +692,9 @@
                     <possible id="5" lang="fr">Folates sériques</possible>
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
             <Item type="multilist" name="Basics::Thyroid">
@@ -686,6 +731,9 @@
                     <possible id="8" lang="fr">Parathormone (PTH), RP</possible>
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
             <Item type="multilist" name="Basics::Biermer">
@@ -707,6 +755,9 @@
                     <possible id="3" lang="fr">Test de Schilling</possible>
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
             <Item type="multilist" name="Basics::Serologies">
@@ -767,6 +818,9 @@
                     <possible id="16" lang="fr">Test à l'urée - Helicobacter pylori</possible>
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
             <Item type="multilist" name="Basics::RhumatoidPolyarth">
@@ -785,6 +839,9 @@
                     <possible id="2" lang="fr">Anticorps antinucléaires (AAN)</possible>
                 </value>
                 <options>resizeToContent;DontPrintEmptyValue</options>
+                <script>
+                <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+                </script>
             </Item>
 
         </Item>
@@ -838,6 +895,9 @@
             <possible id="11" lang="fr">Test de Coombs indirect</possible>
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Basics::Coagulation::Exo">
@@ -867,6 +927,9 @@
 
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Basics::Electrolytes::Exo">
@@ -913,10 +976,13 @@
             <possible id="5" lang="de">Phosphat</possible>
             <possible id="6" lang="de">Plasmaosmolalität</possible>
             <possible id="7" lang="de">Laktat</possible>
-<!--                    <possible id="8" lang="de">Dioxide de Carbone (CO2)</possible>-->
+            <possible id="8" lang="de">Kohlenstoffdioxid</possible>
 
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Basics::Kidney::Exo">
@@ -941,6 +1007,9 @@
             <possible id="2" lang="de">Kreatinin &amp; Kreatinin-Clearance</possible>
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Basics::Proteins::Exo">
@@ -969,6 +1038,9 @@
             <possible id="3" lang="de">CRP (C-Reaktives Protein)</possible>
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Basics::Liver::Exo">
@@ -1045,6 +1117,9 @@
             <possible id="15" lang="de">Anticorps anti-Hépatite E</possible>
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Basics::Metabolic::Exo">
@@ -1087,6 +1162,9 @@
             <possible id="10" lang="fr">Microalbuminurie</possible>
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Basics::Cancer::Exo">
@@ -1120,6 +1198,9 @@
             <possible id="7" lang="fr">bêta HCG</possible>
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Basics::Iron::Exo">
@@ -1141,6 +1222,9 @@
             <possible id="3" lang="fr">Coefficient de saturation de la sidérophiline</possible>
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Basics::Prostate::Exo">
@@ -1159,6 +1243,9 @@
             <possible id="2" lang="fr">Prostatic acid phosphatase (PAP)</possible>
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Basics::Vitamins::Exo">
@@ -1186,6 +1273,9 @@
             <possible id="5" lang="fr">Folates sériques</possible>
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Basics::Thyroid::Exo">
@@ -1222,6 +1312,9 @@
             <possible id="8" lang="fr">Parathormone (PTH), RP</possible>
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Basics::Biermer::Exo">
@@ -1243,6 +1336,9 @@
             <possible id="3" lang="fr">Test de Schilling</possible>
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Basics::Serologies::Exo">
@@ -1303,6 +1399,9 @@
             <possible id="16" lang="fr">Test à l'urée - Helicobacter pylori</possible>
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
     <Item type="multilist" name="Basics::RhumatoidPolyarth::Exo">
@@ -1321,6 +1420,9 @@
             <possible id="2" lang="fr">Anticorps antinucléaires (AAN)</possible>
         </value>
         <options>resizeToContent;DontPrintEmptyValue</options>
+        <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.labtests.fr.bizone.bz_onCheckChanged();</onValueChanged>
+        </script>
     </Item>
 
 </Item>

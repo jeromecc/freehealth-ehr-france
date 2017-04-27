@@ -1,6 +1,7 @@
-namespace.module('io.freehealth.prescriptions.labtests.fr.bizone', function (exports, require) {
+namespace.module('com.freemedforms.prescriptions.labtests.fr.bizone', function (exports, require) {
     //var bz_affectionExoneranteHeaderTextEdit;
     //var bz_maladiesIntercurrentesHeaderTextEdit;
+    var checkValue = false;
     var bz_bizoneCheckUi;
     var bz_bizoneCheckItem;
     var orderText;
@@ -94,7 +95,7 @@ namespace.module('io.freehealth.prescriptions.labtests.fr.bizone', function (exp
 
 
 function bz_getUiElements() {
-        //print("hello");
+        print("lab test bz_getUiElements()");
         freemedforms.forms.namespaceInUse = "";
         var formUi = freemedforms.forms.item("Subs::Tools::LabTests");
         freemedforms.forms.namespaceInUse = "Subs::Tools::LabTests";
@@ -157,13 +158,13 @@ function bz_connectUiElements()
 
 function bz_onCheckChanged()
 {
-    var checkValue = bz_bizoneCheckItem.checked;
+    checkValue = bz_bizoneCheckItem.checked;
 
     bz_warningUi.visible = false;
     bz_affectionExoneranteItem = freemedforms.forms.item("Affection::Exonerante");
 
     if (checkValue === false) {
-        print("checkValue: ",checkValue);
+        print("checkValue lab assistant: ", checkValue);
         bz_interHeaderItem.currentText = "print";
         bz_exoHeaderItem.currentText = "";
         //bz_affectionExoneranteHeaderTextEdit.visible = false;
@@ -204,6 +205,7 @@ function bz_onCheckChanged()
             }
         }
      } else {
+        print("lab assistant checkValue: ", checkValue);
         // delete warning about the need to delete ALD order
         bz_warningUi.setText("");
         bz_warningUi.visible = false;
@@ -223,7 +225,7 @@ function retranslateUi() {
 });
 
 // Setup Ui
-namespace.io.freehealth.prescriptions.labtests.fr.bizone.setupUi();
+namespace.com.freemedforms.prescriptions.labtests.fr.bizone.setupUi();
 
 
 

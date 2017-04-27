@@ -6,10 +6,10 @@
 
     <!-- Non translatable values -->
     <authors>Jérôme Pinguet</authors>
-    <version>2.0.0</version>
-    <fmfv>0.9.9</fmfv>
+    <version>3.0.0</version>
+    <fmfv>0.10.0</fmfv>
     <cdate>2016-06-27</cdate>
-    <lmdate>2016-10-04</lmdate>
+    <lmdate>2017-04-26</lmdate>
     <icon>edit.png</icon>
     <weblink>https://www.medecinelibre.com</weblink>
     <!-- Translatable values -->
@@ -31,7 +31,7 @@
     <label lang="xx">Certificat médical pour absence scolaire</label>
     <label lang="fr">Certificat médical pour absence scolaire</label>
     <icon>__theme__/typewriter.png</icon>
-    <options>DontPrintEmptyValues;UseFormNameAsNameSpace;noheader</options>
+    <options>DontPrintEmptyValues;UseFormNameAsNameSpace;GenericHeader</options>
     <file type="htmlprintmask">./html/xx/schoolabsence_mask.html</file>
     <file type="htmlexportmask">./html/xx/schoolabsence_mask.html</file>
 

@@ -76,6 +76,12 @@ style="border-style: none; background-color: white; margin-top: 0px; margin-bott
 <td align="center">{{~Patient.Identity.FullName~}}</td>
 </tr>
 <tr>
+<td align="center">{{Date de naissance: ~Patient.Age.DateOfBirth~}}</td>
+</tr>
+<tr>
+<td align="center">{{~Patient.Age.FullAge~}}</td>
+</tr>
+<tr>
 <td align="center">{{~Patient.Insurance.SocialNumber~}}</td>
 </tr>
 </table>
@@ -136,9 +142,12 @@ style="border-style: none; background-color: white; margin-top: 0px; margin-bott
 <td colspan="2">
 <p align="right" style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Lucida Grande'; font-size:13pt;">[[DATE]]</span></p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;"><br /></p>
-<p align="right" style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:14pt;">{{~Patient.Identity.FullName~}}</span><br/>{{Date de naissance: ~Patient.Age.DateOfBirth~}}</p>{{~Patient.Age.DateFullAge~}}
+<p align="right" style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:14pt;">{{~Patient.Identity.FullName~}}</span><br/>
+{{Date de naissance: ~Patient.Age.DateOfBirth~}}<br/>
+{{~Patient.Age.FullAge~}}</p>
 <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Lucida Grande'; font-size:13pt;"><br /></p>
-<p align="right" style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">{{~Patient.Age.YearsOld~}}</span></p></td></tr></table>
+</td></tr>
+</table>
 
 <div style="color: white;">~Form.Data.Item.GP::Basic::Prescr::Text::Header~</div>
 }}

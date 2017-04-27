@@ -6,10 +6,10 @@
   <formdescription>
     <!-- Non translatable values -->
     <authors>Eric Maeker, MD</authors>
-    <version>2.0.0</version>
+    <version>3.0.0</version>
     <fmfv>0.8.2</fmfv>
     <cdate>2013-02-27</cdate>
-    <lmdate>2013-02-27</lmdate>
+    <lmdate>2017-04-26</lmdate>
     <icon>__theme__/labtests.png</icon>
     <weblink>https://freemedsoft.com</weblink>
     <bibliography/>
@@ -39,7 +39,7 @@
   <MedForm name="Subs::Tools::LabTests::Results::Helper" uifilename="./ui/xx/labtests_results.ui">
     <label lang="xx">Labtests results</label>
     <label lang="fr">Résultats de biologie</label>
-    <options>UseFormNameAsNameSpace</options>
+    <options>UseFormNameAsNameSpace;AdministrativeHeader</options>
     <icon>__theme__/labtest.png</icon>
 
         <Item type="detailswidget" name="CBC" uifilename="./ui/xx/cbc.ui">

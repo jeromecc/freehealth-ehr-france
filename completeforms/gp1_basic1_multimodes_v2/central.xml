@@ -6,10 +6,10 @@
   <formdescription>
     <!-- Non translatable values -->
     <authors>Eric Maeker, MD; Jerome Pinguet</authors>
-    <version>2.0.0</version>
-    <fmfv>0.9.9</fmfv>
+    <version>4.0.0</version>
+    <fmfv>0.10.0</fmfv>
     <cdate>2012-09-03</cdate>
-    <lmdate>2016-12-16</lmdate>
+    <lmdate>2017-04-27</lmdate>
     <icon>generalpractitioner.png</icon>
     <weblink>https://freemedsoft.com</weblink>
     <bibliography/>
@@ -106,15 +106,15 @@
     <icon>__theme__/edit.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
 
-    <file>__subForms__/prescriptions/fr/bizone/central.xml</file>
+    <!--<file>__subForms__/prescriptions/fr/bizone/central.xml</file>-->
 
-    <file>__subForms__/prescriptions/lab_assistant/central.xml</file>
+    <!--<file>__subForms__/prescriptions/lab_assistant/central.xml</file>-->
 
     <MedForm name="GP::Basic::Prescr::Drugs">
       <label lang="xx">Drugs prescriptions</label>
       <label lang="fr">Prescriptions médicamenteuses</label>
       <icon>__theme__/drugs.png</icon>
-      <options>DontPrintEmptyValues</options>
+      <options>DontPrintEmptyValues;PrescriptionHeader</options>
       <file type="htmlprintmask">./html/xx/padtools_prescription_drugs_mask.html</file>
       <file type="htmlexportmask">./html/xx/padtools_prescription_drugs_mask.html</file>
 

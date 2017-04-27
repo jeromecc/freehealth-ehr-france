@@ -5,10 +5,10 @@
  <formdescription>
   <!-- Non translatable values -->
   <authors>Eric Maeker, MD; Jerome Pinguet</authors>
-  <version>2.0.0</version>
-  <fmfv>0.9.9</fmfv>
+  <version>3.0.0</version>
+  <fmfv>0.10.0</fmfv>
   <cdate>2012-09-03</cdate>
-  <lmdate>2016-11-27</lmdate>
+  <lmdate>2017-04-26</lmdate>
   <icon>generalpractitioner.png</icon>
   <weblink>https://freemedsoft.com</weblink>
   <bibliography/>
@@ -29,7 +29,7 @@
   <label lang="xx">Various reports</label>
   <label lang="fr">Comptes-rendus divers</label>
   <icon>__theme__/edit.png</icon>
-  <options>DontPrintEmptyValues</options>
+  <options>DontPrintEmptyValues;AdministrativeHeader</options>
   <file type="htmlprintmask">./html/xx/consultation_report.html</file>
   <file type="htmlexportmask">./html/xx/consultation_report.html</file>
 

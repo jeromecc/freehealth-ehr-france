@@ -5,10 +5,10 @@
   <formdescription>
     <!-- Non translatable values -->
     <authors>Jerome Pinguet</authors>
-    <version>5.0.0</version>
-    <fmfv>0.9.7</fmfv>
+    <version>6.0.0</version>
+    <fmfv>0.10.0</fmfv>
     <cdate>2016-11-17</cdate>
-    <lmdate>2016-11-29</lmdate>
+    <lmdate>2017-04-28</lmdate>
     <icon>generalpractitioner.png</icon>
     <weblink>https://medecinelibre.com</weblink>
     <bibliography/>
@@ -106,6 +106,9 @@
     <label lang="fr"></label>
     <options>DontPrintEmptyValues;FullEditor</options>
     <papers>Prescription</papers>
+    <script>
+      <onValueChanged>namespace.com.freemedforms.prescriptions.fr.bizone.bz_onCheckChanged();</onValueChanged>
+    </script>
   </Item>
 
     <!--Item name="maladiesIntercurrentesFileNavigationButton" type="buttonmenupath">
@@ -126,6 +129,9 @@
       <label lang="fr"></label>
       <options>DontPrintEmptyValues;FullEditor</options>
       <papers>Prescription</papers>
+      <script>
+        <onValueChanged>namespace.com.freemedforms.prescriptions.fr.bizone.bz_onCheckChanged();</onValueChanged>
+      </script>
     </Item>
 
     <Item name="Warning" type="shorttext">

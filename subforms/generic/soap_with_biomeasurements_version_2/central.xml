@@ -6,12 +6,12 @@
   <formdescription>
     <!-- Non translatable values -->
     <authors>Eric Maeker, MD ; Jerome Pinguet</authors>
-    <version>3.0.0</version>
-    <fmfv>0.9.9</fmfv>
+    <version>test</version>
+    <fmfv>0.10.1</fmfv>
     <cdate>2012-10-13</cdate>
-    <lmdate>2016-11-26</lmdate>
+    <lmdate>2017-04-29</lmdate>
     <icon>__theme__/stethoscope.png</icon>
-    <weblink>https://freemedsoft.com</weblink>
+    <weblink>https://freehealth.io</weblink>
     <bibliography/>
 
     <!-- Translatable values -->
@@ -27,6 +27,12 @@
     <specialties lang="de">Tools</specialties>
 
     <updateinfo>
+    <updateversion from="3.0.0" to="4.0.0">
+    <text lang="xx">
+    add head circumference and temperature
+    change header
+    </text>
+    </updateversion>
     <updateversion from="0.8.4" to="0.9.9">
       <text lang="fr">
       Calcul IMC
@@ -63,7 +69,7 @@
     <label lang="xx">Consultation</label>
     <label lang="fr">Consultation</label>
     <label lang="de">Konsultation</label>
-    <options>UseFormNameAsNameSpace</options>
+    <options>UseFormNameAsNameSpace;AdministrativeHeader</options>
     <icon>__theme__/stethoscope.png</icon>
     <file type="htmlprintmask">./html/xx/padtools_mask.html</file>
     <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
@@ -154,8 +160,11 @@
           <uilink label="hLabel" widget="height;heightUnit" layout=""/>
           <label lang="xx">Height</label>
           <label lang="fr">Taille</label>
+          <label lang="de">Größe</label>
           <tooltip lang="xx">Height</tooltip>
           <tooltip lang="fr">Taille</tooltip>
+          <tooltip lang="de">Größe</tooltip>
+
           <options>DontPrintEmptyValues;Length</options>
           <default>centimeter</default>
           <patientdata>HeightInCentimeters</patientdata>
@@ -165,8 +174,10 @@
           <uilink widget="bmiLabel"/>
           <label lang="xx">BMI</label>
           <label lang="fr">IMC</label>
+          <label lang="de">BMI</label>
           <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
           <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
+          <tooltip lang="de">Body-Mass-Index (kg/m2)&lt;br />BMI=Größe (cm) / (Gewicht (kg) ^2)</tooltip>
           <options>DontPrintEmptyValues</options>
         </Item>
 
@@ -185,9 +196,57 @@
           <uilink label="bmiLabel" widget="bmiValueLineEdit" layout=""/>
           <label lang="xx">BMI</label>
           <label lang="fr">IMC</label>
+          <label lang="de">BMI</label>
           <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
           <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
+          <tooltip lang="de">Body-Mass-Index (kg/m2)&lt;br />BMI=Körpergröße (cm) / (Körpermasse (kg) ^2)</tooltip>
           <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="helptext" name="ObjectiveGroup::Temperature::TemperatureLabel">
+          <uilink label="temperatureLabel" widget="" layout=""/>
+          <label lang="xx">T°</label>
+          <label lang="fr">T°</label>
+          <label lang="de">T°</label>
+          <tooltip lang="xx">Temperature</tooltip>
+          <tooltip lang="fr">Température</tooltip>
+          <tooltip lang="de">Temperatur</tooltip>
+        </Item>
+
+        <Item type="doublespin" name="ObjectiveGroup::Temperature::TemperatureValue">
+          <uilink label="" widget="temperatureValue" layout=""/>
+          <tooltip lang="xx">Temperature</tooltip>
+          <tooltip lang="fr">Température</tooltip>
+          <tooltip lang="de">Temperatur</tooltip>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="combo" name="ObjectiveGroup::Temperature::TemperatureUnit">
+          <uilink label="" widget="temperatureUnit" layout=""/>
+          <value>
+            <uuid id="0">celsius</uuid>
+            <uuid id="1">fahrenheit</uuid>
+            <possible id="0" lang="xx">°Celsius</possible>
+            <possible id="1" lang="xx">°Fahrenheit</possible>
+            <possible id="0" lang="fr">°Celsius</possible>
+            <possible id="1" lang="fr">°Fahrenheit</possible>
+            <possible id="0" lang="de">°Celsius</possible>
+            <possible id="1" lang="de">°Fahrenheit</possible>
+          </value>
+          <default>celsius</default>
+        </Item>
+
+        <Item type="measurement" name="ObjectiveGroup::HeadCircumference::Value">
+          <uilink label="headCircumferenceLabel" widget="headCircumferenceValue;headCircumferenceUnit" layout=""/>
+          <label lang="xx">Head Circumference</label>
+          <label lang="fr">Périmètre crânien</label>
+          <label lang="de">Kopfumfang</label>
+          <tooltip lang="xx">Head Circumference</tooltip>
+          <tooltip lang="fr">Périmètre crânien</tooltip>
+          <tooltip lang="de">Kopfumfang</tooltip>
+          <options>DontPrintEmptyValues;Length</options>
+          <default>centimeter</default>
+          <patientdata>HeadCircumferenceInCentimeters</patientdata>
         </Item>
 
     </Item>

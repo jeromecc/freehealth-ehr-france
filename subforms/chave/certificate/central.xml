@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+  <formdescription>
+    <!-- Non translatable values -->
+    <authors>Jerome Pinguet</authors>
+    <version>1.0.0</version>
+    <fmfv>0.9.9</fmfv>
+    <cdate>2017-01-06</cdate>
+    <lmdate>2017-01-06</lmdate>
+    <icon>__theme__/edit.png</icon>
+    <weblink>https://www.medecinelibre.com</weblink>
+    <bibliography/>
+
+    <!-- Translatable values -->
+    <license>GPLv3</license>
+    <description lang="xx">Certificates</description>
+    <description lang="fr">Certificats</description>
+    <category lang="xx">Chave</category>
+    <category lang="fr">Chave</category>
+    <specialties lang="xx">Tools</specialties>
+    <specialties lang="fr">Outils</specialties>
+
+    <updateinfo>
+      <updateversion from="" to="0.9.9">
+        <text lang="xx">First version</text>
+        <text lang="fr">Première version</text>
+      </updateversion>
+    </updateinfo>
+
+  </formdescription>
+
+  <MedForm name="Chave::Archive::Certificate" uifilename="./ui/xx/certificate.ui">
+    <label lang="xx">Certificates (archive)</label>
+    <label lang="fr">Certificats (archive)</label>
+    <options>UseFormNameAsNameSpace</options>
+    <icon>__theme__/stethoscope.png</icon>
+    <file type="htmlprintmask">./html/xx/certificate.html</file>
+    <file type="htmlexportmask">./html/xx/certificate.html</file>
+
+        <Item type="longtext" name="Text">
+          <uilink label="" widget="certificateTextEdit" layout=""/>
+          <tooltip lang="xx">Certificate</tooltip>
+          <tooltip lang="fr">Certificat</tooltip>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="shorttext" name="Author">
+          <uilink label="authorLabel" widget="authorLineEdit" layout=""/>
+          <label lang="xx">Author</label>
+          <label lang="fr">Auteur</label>
+          <options>notprintable</options>
+        </Item>
+
+
+  </MedForm>
+
+</FreeMedForms>

@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>570</width>
-    <height>480</height>
+    <height>583</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string/>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_3">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QGroupBox" name="sGroup">
      <property name="title">
@@ -138,7 +138,7 @@
           </property>
          </widget>
         </item>
-        <item row="3" column="1" colspan="2">
+        <item row="3" column="1">
          <widget class="QLabel" name="bmiValueLabel">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
@@ -164,10 +164,43 @@
           </property>
          </widget>
         </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="headCircumferenceLabel">
+          <property name="text">
+           <string>HC</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1" colspan="2">
+         <widget class="QDoubleSpinBox" name="headCircumferenceValue"/>
+        </item>
+        <item row="4" column="3">
+         <widget class="QComboBox" name="headCircumferenceUnit"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="temperatureLabel">
+          <property name="text">
+           <string>T</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1" colspan="2">
+         <widget class="QDoubleSpinBox" name="temperatureValue">
+          <property name="decimals">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <double>150.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="3">
+         <widget class="QComboBox" name="temperatureUnit"/>
+        </item>
        </layout>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="oLayout" stretch="">
+       <layout class="QVBoxLayout" name="oLayout">
         <property name="sizeConstraint">
          <enum>QLayout::SetMaximumSize</enum>
         </property>

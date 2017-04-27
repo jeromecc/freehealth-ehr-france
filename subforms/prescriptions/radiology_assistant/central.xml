@@ -38,7 +38,7 @@
     <label lang="xx">Radiology exams</label>
     <label lang="fr">Examens de radiologie</label>
     <icon>__theme__/xray.png</icon>
-    <options>DontPrintEmptyValues;UseFormNameAsNameSpace</options>
+    <options>DontPrintEmptyValues;UseFormNameAsNameSpace;PrescriptionHeader</options>
 
       <Item type="group" name="SelectionGroup">
         <uilink label="" widget="selectGroupBox" layout=""/>

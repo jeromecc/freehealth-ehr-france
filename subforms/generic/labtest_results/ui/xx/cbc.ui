@@ -22,6 +22,12 @@
        <height>16777215</height>
       </size>
      </property>
+     <property name="decimals">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <double>1000.000000000000000</double>
+     </property>
     </widget>
    </item>
    <item row="2" column="5">
@@ -98,6 +104,12 @@
        <height>16777215</height>
       </size>
      </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>1000000.000000000000000</double>
+     </property>
     </widget>
    </item>
    <item row="2" column="2">
@@ -120,6 +132,12 @@
        <width>100</width>
        <height>16777215</height>
       </size>
+     </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>1000000.000000000000000</double>
      </property>
     </widget>
    </item>
@@ -167,6 +185,12 @@
        <height>16777215</height>
       </size>
      </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>1000000.000000000000000</double>
+     </property>
     </widget>
    </item>
    <item row="0" column="2">
@@ -203,6 +227,12 @@
        <height>16777215</height>
       </size>
      </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>1000000.000000000000000</double>
+     </property>
     </widget>
    </item>
    <item row="0" column="4">
@@ -225,6 +255,12 @@
        <width>100</width>
        <height>16777215</height>
       </size>
+     </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>1000000.000000000000000</double>
      </property>
     </widget>
    </item>
@@ -258,6 +294,12 @@
        <width>100</width>
        <height>16777215</height>
       </size>
+     </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>1000.000000000000000</double>
      </property>
     </widget>
    </item>
@@ -334,6 +376,12 @@
        <height>16777215</height>
       </size>
      </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>1000.000000000000000</double>
+     </property>
     </widget>
    </item>
    <item row="3" column="4">
@@ -368,6 +416,12 @@
        <height>16777215</height>
       </size>
      </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>1000000.000000000000000</double>
+     </property>
     </widget>
    </item>
    <item row="5" column="3">
@@ -378,6 +432,12 @@
        <height>16777215</height>
       </size>
      </property>
+     <property name="decimals">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <double>1000.000000000000000</double>
+     </property>
     </widget>
    </item>
    <item row="3" column="1">
@@ -387,6 +447,12 @@
        <width>100</width>
        <height>16777215</height>
       </size>
+     </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <double>1000000.000000000000000</double>
      </property>
     </widget>
    </item>
